@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Headers, Http, RequestOptions, Response } from '@angular/http';
-import { Observable } from 'rxjs/Rx'; 
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Rx';
 
 
 @Injectable()
@@ -11,7 +11,7 @@ export class HotelesService {
   constructor(private http: Http) { }
 
   getAllHotels(): Observable<any> {
-    return this.http.get(this.apiUrl).subscribe(this.extractData);
+    return this.http.get(this.apiUrl).map(this.extractData);
   }
 
   private extractData(response: Response) {
