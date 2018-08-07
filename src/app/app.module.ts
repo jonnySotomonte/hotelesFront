@@ -6,10 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 import {HotelesService} from './service/hoteles.service';
+import { HotelBoxComponent } from './components/hotel-box/hotel-box.component';
+import { AmenitiesComponent } from './components/amenities/amenities.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HotelBoxComponent,
+    AmenitiesComponent
   ],
   imports: [
     BrowserModule,
@@ -18,6 +22,7 @@ import {HotelesService} from './service/hoteles.service';
   providers: [
     HotelesService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [HotelBoxComponent, AmenitiesComponent]
 })
 export class AppModule { }

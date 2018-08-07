@@ -1,0 +1,25 @@
+.hotel-box-container {
+    background-color: white;
+    height: 200px;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+.image-box-container {
+    width: 220px;
+    max-height: 177px !important;
+    margin-top: 10px;
+}
+.hotel-name {
+    margin-top: 10px;
+    color: #0A34F9;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.star-image {
+    width: 20px;
+}
+.hotel-description-box {
+    height: 100%;
+    border-right-style: dashed;
+    border-right-color: lightgray;
+}

@@ -6,5 +6,5 @@ export class HotelesInfo {
     stars: number;
     price: number;
     image: string;
-    aminities: Array<Amenities>
+    amenities: Array<Amenities>
 }
