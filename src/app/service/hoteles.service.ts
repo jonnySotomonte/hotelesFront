@@ -11,7 +11,7 @@ export class HotelesService {
   constructor(private http: Http) { }
 
   getAllHotels(): Observable<any> {
-    return this.http.get(this.apiUrl).map(this.extractData);
+    return this.http.get(this.apiUrl).map(response => response.json());
   }
 
   private extractData(response: Response) {

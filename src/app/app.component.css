@@ -1,0 +1,65 @@
+.header{
+    background-color: #050A76;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    height: 73px;
+    display: table;
+}
+
+.logo-header{
+    width: 100%;
+}
+
+.vertical-align {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.container{
+    background-color: #f6f7f8;
+    height: 100vh;
+}
+
+.filter-container {
+    margin-top: 20px;
+    background-color: white;
+}
+
+.filter-text {
+ font-size: 20px;
+ font-weight: bold;
+}
+
+.search-filter-logo, .star-filter-logo {
+    width: 50px;
+    margin-top: 10px;
+    float: left;
+}
+.hotel-name-filter, .stars-text-filter, .glyphicon-triangle-top::before {
+    color: #0A34F9;
+}
+.margin-top-10 {
+    margin-top: 10px;
+}
+.input-filter {
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+button {
+    margin-top: 10px;
+    background-color: #050A76;
+    border: #050A76;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.stars-radio-filter {
+    margin-top: 24px;
+}
+.stars-text-radio-filter {
+    margin-top: 20px;
+    font-weight: bold;
+}
