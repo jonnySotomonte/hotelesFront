@@ -1,25 +1,124 @@
-.hotel-box-container {
-    background-color: white;
-    height: 200px;
-    margin-top: 20px;
-    margin-right: 30px;
+@media only screen and (max-width: 767px) {
+
 }
-.image-box-container {
-    width: 220px;
-    max-height: 177px !important;
-    margin-top: 10px;
+
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+
+    .hotel-box-container {
+        background-color: white;
+        height: 150px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .image-box-container {
+        width: 150px;
+        max-height: 140px !important;
+        margin-top: 10px;
+    }
+
+    .hotel-name {
+        margin-top: 10px;
+        color: #0A34F9;
+        font-size: 18px;
+        font-weight: bolder;
+    }
+
+    .star-image {
+        width: 20px;
+    }
+
+    .hotel-description-box {
+        height: 100%;
+        border-right-style: dashed;
+        border-right-color: lightgray;
+        margin-left: 15px;
+    }
+
+    .hotel-price-description {
+        font-size: 12px;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-top: 20px;
+        margin-left: 7%;
+    }
+
+    .hotel-price {
+        color: #F84E05;
+        font-weight: bold;
+        font-size: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 9%;
+    }
+
+    button{
+        margin-left: 29%;
+        background-color: #050A76;
+        border: #050A76;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 3px;
+        width: 70%;
+    }
+
+    .no-padding {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 }
-.hotel-name {
-    margin-top: 10px;
-    color: #0A34F9;
-    font-size: 18px;
-    font-weight: bolder;
-}
-.star-image {
-    width: 20px;
-}
-.hotel-description-box {
-    height: 100%;
-    border-right-style: dashed;
-    border-right-color: lightgray;
+
+@media only screen and (min-width: 992px) {
+
+    .hotel-box-container {
+        background-color: white;
+        height: 200px;
+        margin-top: 20px;
+        margin-right: 30px;
+    }
+    .image-box-container {
+        width: 220px;
+        max-height: 177px !important;
+        margin-top: 10px;
+    }
+    .hotel-name {
+        margin-top: 10px;
+        color: #0A34F9;
+        font-size: 18px;
+        font-weight: bolder;
+    }
+    .star-image {
+        width: 20px;
+    }
+    .hotel-description-box {
+        height: 100%;
+        border-right-style: dashed;
+        border-right-color: lightgray;
+        margin-left: 35px;
+    }
+    .hotel-price-description {
+        font-size: 12px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 25px;
+        margin-left: 7%;
+    }
+    .hotel-price {
+        color: #F84E05;
+        font-weight: bold;
+        font-size: 24px;
+        margin-left: 7%;
+    }
+    button{
+        margin-left: 25%;
+        background-color: #050A76;
+        border: #050A76;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 3px;
+    }
+
 }
