@@ -1,12 +1,12 @@
 <div class="hotel-box-container">
-  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
     <img src="../../../assets/images/hotels/{{hotel.image}}" class="image-box-container">
   </div>
-  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-6 hotel-description-box">
+  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-5 hotel-description-box">
     <div class="row">
         <p class="hotel-name">{{hotel.name}}</p>
     </div>
-    <div class="row">
+    <div class="row no-margin">
       <div *ngIf="hotel.stars == 1">
           <img src="../../../assets/icons/filters/star-yellow.svg" class="star-image">
       </div>
@@ -23,7 +23,7 @@
           <img src="../../../assets/icons/filters/star-yellow.svg" class="star-image" *ngFor="let number of [0,1,2,3,4]">
       </div>  
     </div>
-    <div class="row">
+    <div class="row no-margin">
       <app-amenities [amenities]="amenities"></app-amenities>
     </div>
   </div>
