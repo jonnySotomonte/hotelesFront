@@ -1,70 +1,69 @@
 <div class="row">
-  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 header">
-    <div class="vertical-align"><img src="../assets/images/logo-almundo.svg" class="logo-header"></div>
-  </div>
-  <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8 header">
+    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 header">
+        <div class="vertical-align"><img src="../assets/images/logo-almundo.svg" class="logo-header"></div>
+    </div>
+    <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8 header">
     </div>
 </div>
 <div class="row">
-  <diV class="col-xs-12 col-sm-12 col-md-12 col-lg-12 container">
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-      <div class="col-xs-12 col-sm-12 col-md-11 col-lg-11 filter-container margin-top-mobile">
-          <div class="filter-text">Filtros</div>
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-11 col-lg-11 filter-container padding-bottom-container">
-          <img src="../assets/icons/filters/search-blue.svg" class="col-xs-1 col-sm-2 col-md-3 col-lg-3 search-filter-logo">
-          <div class="col-xs-9 col-sm-9 col-md-8 col-lg-8 hotel-name-filter margin-top-10">Nombre del Hotel</div>
-          <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 glyphicon glyphicon-triangle-top margin-top-10 no-padding-left"></div>
-          <input type="text" class="col-xs-7 col-xs-12 col-md-7 col-lg-8 input-filter" placeholder="Ingresa el nombre del hotel">
-          <button type="col-xs-5 col-sm-12 col-md-4 col-lg-4 button">Aceptar</button>
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-11 col-lg-11 filter-container padding-bottom-container">
-            <div>
-                <img src="../assets/icons/filters/star-blue.svg" class="col-xs-1 col-sm-2 col-md-3 col-lg-3 star-filter-logo">
-                <div class="col-xs-10 col-sm-9 col-md-8 col-lg-9 stars-text-filter margin-top-10">Estrellas</div>
+    <diV class="col-xs-12 col-sm-12 col-md-12 col-lg-12 container">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <div class="col-xs-12 col-sm-12 col-md-11 col-lg-11 filter-container margin-top-mobile">
+                <div class="filter-text">Filtros</div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-11 col-lg-11 filter-container padding-bottom-container">
+                <img src="../assets/icons/filters/search-blue.svg" class="col-xs-1 col-sm-2 col-md-3 col-lg-3 search-filter-logo">
+                <div class="col-xs-9 col-sm-9 col-md-8 col-lg-8 hotel-name-filter margin-top-10">Nombre del Hotel</div>
                 <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 glyphicon glyphicon-triangle-top margin-top-10 no-padding-left"></div>
+                <input type="text" class="col-xs-7 col-xs-12 col-md-7 col-lg-8 input-filter" placeholder="Ingresa el nombre del hotel" [(ngModel)]="hotelName">
+                <button type="col-xs-5 col-sm-12 col-md-4 col-lg-4 button" (click)="searchByName()">Aceptar</button>
             </div>
-            <div>
-                <input type="radio" name="gender" value="male" class="col-xs-2 col-sm-3 col-md-4 col-lg-2 stars-radio-filter square-radio-button margin-top-17" checked>
-                <p class="col-xs-10 col-sm-9 col-md-8 col-lg-10 stars-text-radio-filter">Todas las estrellas</p>
-            </div>
-            <div>
-                    <input type="radio" name="gender" value="male" class="col-xs-2 col-sm-3 col-md-4 col-lg-2 square-radio-button margin-top-17">
+            <div class="col-xs-12 col-sm-12 col-md-11 col-lg-11 filter-container padding-bottom-container">
+                <div>
+                    <img src="../assets/icons/filters/star-blue.svg" class="col-xs-1 col-sm-2 col-md-3 col-lg-3 star-filter-logo">
+                    <div class="col-xs-10 col-sm-9 col-md-8 col-lg-9 stars-text-filter margin-top-10">Estrellas</div>
+                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 glyphicon glyphicon-triangle-top margin-top-10 no-padding-left"></div>
+                </div>
+                <div>
+                    <input type="radio" name="stars" value="allStars" class="col-xs-2 col-sm-3 col-md-4 col-lg-2 stars-radio-filter square-radio-button margin-top-17" checked (click)="searchByStars()">
+                    <p class="col-xs-10 col-sm-9 col-md-8 col-lg-10 stars-text-radio-filter">Todas las estrellas</p>
+                </div>
+                <div>
+                    <input type="radio" name="stars" value="fiveStars" class="col-xs-2 col-sm-3 col-md-4 col-lg-2 square-radio-button margin-top-17" (click)="searchByStars(5)">
                     <div class="col-xs-10 col-sm-9 col-md-8 col-lg-10 stars-image-filter">
-                            <img src="../assets/icons/filters/star-yellow.svg" class="star-image" *ngFor="let number of [0,1,2,3,4]">
+                        <img src="../assets/icons/filters/star-yellow.svg" class="star-image" *ngFor="let number of [0,1,2,3,4]">
                     </div>
-            </div>
-            <div>
-                    <input type="radio" name="gender" value="male" class="col-xs-2 col-sm-3 col-md-4 col-lg-2 square-radio-button margin-top-17">
+                </div>
+                <div>
+                    <input type="radio" name="stars" value="fourStars" class="col-xs-2 col-sm-3 col-md-4 col-lg-2 square-radio-button margin-top-17" (click)="searchByStars(4)">
                     <div class="col-xs-10 col-sm-9 col-md-8 col-lg-10 stars-image-filter">
-                            <img src="../assets/icons/filters/star-yellow.svg" class="star-image" *ngFor="let number of [0,1,2,3]">
+                        <img src="../assets/icons/filters/star-yellow.svg" class="star-image" *ngFor="let number of [0,1,2,3]">
                     </div>
-            </div>
-            <div>
-                <input type="radio" name="gender" value="male" class="col-xs-2 col-sm-3 col-md-4 col-lg-2 square-radio-button margin-top-17">
-                <div class="col-xs-10 col-sm-9 col-md-8 col-lg-10 stars-image-filter">
+                </div>
+                <div>
+                    <input type="radio" name="stars" value="threeStars" class="col-xs-2 col-sm-3 col-md-4 col-lg-2 square-radio-button margin-top-17" (click)="searchByStars(3)">
+                    <div class="col-xs-10 col-sm-9 col-md-8 col-lg-10 stars-image-filter">
                         <img src="../assets/icons/filters/star-yellow.svg" class="star-image" *ngFor="let number of [0,1,2]">
+                    </div>
                 </div>
-            </div>
-            <div>
-                <input type="radio" name="gender" value="male" class="col-xs-2 col-sm-3 col-md-4 col-lg-2 square-radio-button margin-top-17">
-                <div class="col-xs-10 col-sm-9 col-md-8 col-lg-10 stars-image-filter">
+                <div>
+                    <input type="radio" name="stars" value="twoStars" class="col-xs-2 col-sm-3 col-md-4 col-lg-2 square-radio-button margin-top-17" (click)="searchByStars(2)">
+                    <div class="col-xs-10 col-sm-9 col-md-8 col-lg-10 stars-image-filter">
                         <img src="../assets/icons/filters/star-yellow.svg" class="star-image" *ngFor="let number of [0,1]">
+                    </div>
+                </div>
+                <div>
+                    <input type="radio" name="stars" value="oneStar" class="col-xs-2 col-sm-3 col-md-4 col-lg-2 square-radio-button margin-top-17" (click)="searchByStars(1)">
+                    <div class="col-xs-10 col-sm-9 col-md-8 col-lg-10 stars-image-filter">
+                        <img src="../assets/icons/filters/star-yellow.svg" class="star-image">
+                    </div>
                 </div>
             </div>
-            <div>
-                <input type="radio" name="gender" value="male" class="col-xs-2 col-sm-3 col-md-4 col-lg-2 square-radio-button margin-top-17">
-                <div class="col-xs-10 col-sm-9 col-md-8 col-lg-10 stars-image-filter">
-                    <img src="../assets/icons/filters/star-yellow.svg" class="star-image">
-                </div>
-            </div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-        <div class="row" *ngFor="let hotel of hoteles">
-            <app-hotel-box [hotel]="hotel"></app-hotel-box>
         </div>
-    </div>
-  </diV>
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+            <div class="row" *ngFor="let hotel of hoteles">
+                <app-hotel-box [hotel]="hotel"></app-hotel-box>
+            </div>
+        </div>
+    </diV>
 </div>
-

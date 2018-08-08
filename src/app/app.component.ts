@@ -9,7 +9,7 @@ import { HotelesInfo } from './models/hoteles-info.model';
 })
 export class AppComponent implements OnInit{
 
-  title = 'hotelesFront';
+  public hotelName = "";
   hoteles: Array<HotelesInfo> = new Array();
 
   constructor(private service: HotelesService ){
@@ -18,7 +18,24 @@ export class AppComponent implements OnInit{
   ngOnInit() {
     this.service.getAllHotels().subscribe(response => {
       this.hoteles = response;
-      
     })
+  }
+
+  searchByName() {
+    this.service.getHotelByName(this.hotelName).subscribe(response => {
+      this.hoteles = response;
+    })
+  }
+
+    searchByStars(stars: number) {
+    if(stars == undefined){
+      this.service.getAllHotels().subscribe(response => {
+        this.hoteles = response;
+      })
+    } else {
+      this.service.getHotelByStars(stars).subscribe(response => {
+        this.hoteles = response;
+      })
+    }
   }
 }

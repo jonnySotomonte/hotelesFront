@@ -1,9 +1,10 @@
-import './extensions/rxjs-extensions'
+import './extensions/rxjs-extensions';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
 import {HotelesService} from './service/hoteles.service';
 import { HotelBoxComponent } from './components/hotel-box/hotel-box.component';
@@ -17,7 +18,8 @@ import { AmenitiesComponent } from './components/amenities/amenities.component';
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [
     HotelesService

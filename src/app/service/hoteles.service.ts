@@ -14,9 +14,13 @@ export class HotelesService {
     return this.http.get(this.apiUrl).map(response => response.json());
   }
 
-  private extractData(response: Response) {
-    console.log(response);
-    return response;
-}
+  getHotelByName(hotelName: string): Observable<any> {
+    const resource = this.apiUrl + 'byName?name=' + hotelName;
+    return this.http.get(resource).map(response => response.json());
+  }
 
+  getHotelByStars(stars: number): Observable<any> {
+    const resource = this.apiUrl + 'byStars?stars=' + stars;
+    return this.http.get(resource).map(response => response.json());
+  }
 }
