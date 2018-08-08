@@ -1,3 +1,22 @@
+PAra iniciar el proyecto es necesario:
+
+1. Instalar NodeJS
+
+2. Clonar el repositorio
+
+3. Parado en la carpeta raiz del proyecto donde se descargo el repositorio correr por consola de comandos la siguiente instrucción
+    --> npm install
+
+4. Parado en la carpeta raiz del proyecto donde se descargo el repositorio correr por consola de comandos la siguiente instrucción
+  --> ng serve
+
+5. Esto mostrará un mensaje indicando que el proyecto está corriendo de manera local por el puerto 4200
+
+6.  En un navegador de internet (Google Chrome, Mozilla Firefox, Internet Explorer, Safari) ingresar a la URL
+  --> http://localhost:4200
+
+
+
 # HotelesFront
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
